@@ -9,7 +9,7 @@ node{
     }
   stage('archiving artifcats')
    {
-     archiveArtifacts artifacts: 'taget/*.jar', followSymlinks: false
+     archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
     }
   stage('display testresults')
    {
