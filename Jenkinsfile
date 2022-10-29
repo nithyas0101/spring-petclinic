@@ -7,4 +7,12 @@ node{
     {
       sh 'mvn package'
     }
+  stage('archiving artifcats')
+   {
+     archiveArtifacts artifacts: 'taget/*.jar', followSymlinks: false
+    }
+  stage('display testresults')
+   {
+     junit 'target/surefire-reports/*.xml'
+   }
   }
